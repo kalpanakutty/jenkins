@@ -4,20 +4,20 @@ pipeline{
      stage('build'){
          steps{
              git 'https://github.com/kalpanakutty/Devops.git'
-             sh."./mvnw compile"
+             sh "./mvnw compile"
              echo 'Building the project with maven compile'
          }
      }
      stage('Test'){
          steps{
-             sh."./mvnw test"
+             sh "./mvnw test"
              echo 'Testing the project with maven test'    
                   }
 
      }
      stage(package){
          steps{
-             sh."./mvnw package"
+             sh "./mvnw package"
              echo 'Packing the project with maven package'
          }
      }
